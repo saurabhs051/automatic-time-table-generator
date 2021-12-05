@@ -9,18 +9,16 @@ different departments.
 Timetable development process starts when each Head of Department provide the following
 information to be used for timetable scheduling. The information provides the modules with dates,
 time and venues suitable in a particular semester :
-
-● Examinable courses in a particular semester.
-● Dates for lectures to be held (Lectures can be scheduled between Monday and
-Friday).
-● Specified time for lectures ( i.e. Between 8am and 6pm)
-● The venue of the scheduled lectures.
+ - Examinable courses in a particular semester.
+ - Dates for lectures to be held (Lectures can be scheduled between Monday and Friday).
+ - Specified time for lectures ( i.e. Between 8am and 6pm)
+ - The venue of the scheduled lectures.
 
 A timetabling problem consists of four parameters and they are:
-a. T (set of time)
-b. R (set of available resources)
-c. M (set of scheduled contacts)
-d. C (set of constraints)
+- T (set of time)
+- R (set of available resources)
+- M (set of scheduled contacts)
+- C (set of constraints)
 
 This problem assigns time and resources to the contacts in such a way that the constraints will be
 satisfied. In various timetabling problems, educational timetabling has been generally examined
