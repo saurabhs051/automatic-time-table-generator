@@ -1,0 +1,372 @@
+<!doctype html>
+<html>
+<head>
+   <title>Database</title>
+   <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+   <link rel="stylesheet" href= "{{ url_for('static',filename='styles/displayStyle.css') }}">
+
+<style>
+	input[type="text"] {  
+                text-align: center; 
+            } 
+</style>
+</head>
+   <body>
+
+
+
+<div class="wrapper">
+  
+	<form action="/index">
+	  <button class="push_button blue">Go to Home Page</button>
+	</form>
+  <br>
+  <br>
+  
+  <div class="header">
+    	Sections Database
+  </div><br>
+  <div class="table">
+    
+    <div class="row header">
+      <div class="cell">
+        ID
+      </div>
+      <div class="cell">
+        Name
+      </div>
+      <div class="cell">
+        Branch
+      </div>
+      <div class="cell">
+        Semester
+      </div>
+      <div class="cell">
+        Sub1
+      </div>
+      <div class="cell">
+        Credit1
+      </div>
+      <div class="cell">
+        Sub2
+      </div>
+      <div class="cell">
+        Credit2
+      </div>
+      <div class="cell">
+        Sub3
+      </div>
+      <div class="cell">
+        Credit3
+      </div>
+      <div class="cell">
+        Sub4
+      </div>
+      <div class="cell">
+        Credit4
+      </div>
+      <div class="cell">
+        Sub5
+      </div>
+      <div class="cell">
+        Credit5
+      </div>
+      <div class="cell">
+        Sub6
+      </div>
+      <div class="cell">
+        Credit6
+      </div>
+      <div class="cell">
+        Sub7
+      </div>
+      <div class="cell">
+        Credit7
+      </div>
+      <div class="cell">
+        Sub8
+      </div>
+      <div class="cell">
+        Credit8
+      </div>
+      <div class="cell">
+        Lab1
+      </div>
+      <div class="cell">
+        Lab2
+      </div>
+      <div class="cell">
+        Lab3
+      </div>
+      <div class="cell">
+        Lab4
+      </div>
+      <div class="cell">
+        Lab5
+      </div>
+    </div>
+    
+    {% for row in rows1 %}
+    <div class="row">
+      <div class="cell" data-title="ID">
+        {{row["id"]}}
+      </div>
+      <div class="cell" data-title="Name">
+        {{row["name"]}}
+      </div>
+      <div class="cell" data-title="Year">
+        {{row["branch"]}}
+      </div>
+      <div class="cell" data-title="Semester">
+        {{row["sem"]}}
+      </div>
+      <div class="cell" data-title="Sub1">
+        {{row["sub1"]}}
+      </div>
+      <div class="cell" data-title="Credit1">
+        {{row["credit1"]}}
+      </div>
+      <div class="cell" data-title="Sub2">
+        {{row["sub2"]}}
+      </div>
+      <div class="cell" data-title="Credit2">
+        {{row["credit2"]}}
+      </div>
+      <div class="cell" data-title="Sub3">
+        {{row["sub3"]}}
+      </div>
+      <div class="cell" data-title="Credit3">
+        {{row["credit3"]}}
+      </div>
+      <div class="cell" data-title="Sub4">
+        {{row["sub4"]}}
+      </div>
+      <div class="cell" data-title="Credit4">
+        {{row["credit4"]}}
+      </div>
+      <div class="cell" data-title="Sub5">
+        {{row["sub5"]}}
+      </div>
+      <div class="cell" data-title="Credit5">
+        {{row["credit5"]}}
+      </div>
+      <div class="cell" data-title="Sub6">
+        {{row["sub6"]}}
+      </div>
+      <div class="cell" data-title="Credit6">
+        {{row["credit6"]}}
+      </div>
+      <div class="cell" data-title="Sub7">
+        {{row["sub7"]}}
+      </div>
+      <div class="cell" data-title="Credit7">
+        {{row["credit7"]}}
+      </div>
+       <div class="cell" data-title="Sub8">
+        {{row["sub8"]}}
+      </div>
+      <div class="cell" data-title="Credit8">
+        {{row["credit8"]}}
+      </div>
+      <div class="cell" data-title="Lab1">
+        {{row["lab1"]}}
+      </div>
+      <div class="cell" data-title="Lab1">
+        {{row["lab2"]}}
+      </div>
+      <div class="cell" data-title="Lab1">
+        {{row["lab3"]}}
+      </div>
+      <div class="cell" data-title="Lab1">
+        {{row["lab4"]}}
+      </div>
+      <div class="cell" data-title="Lab1">
+        {{row["lab5"]}}
+      </div>
+    </div>
+    {% endfor %}
+
+    <br>
+	  <form action="/remove_section" method="post">
+	  	<input type="text" class="form__input" placeholder="ID" name="remove_sec">
+	  	<button class="push_button red" type="submit">remove</button>
+	  </form>
+    
+  </div>
+  
+
+  <div class="header">
+    	Teachers Database
+  </div><br>
+  <div class="table">
+    
+    <div class="row header green">
+      <div class="cell">
+        ID
+      </div>
+      <div class="cell">
+        Name
+      </div>
+      <div class="cell">
+        Sub1
+      </div>
+      <div class="cell">
+        Periods
+      </div>
+      <div class="cell">
+        Sub2
+      </div>
+      <div class="cell">
+        Periods
+      </div>
+      <div class="cell">
+        Sub3
+      </div>
+      <div class="cell">
+        Periods
+      </div>
+      <div class="cell">
+        Sub4
+      </div>
+      <div class="cell">
+        Periods
+      </div>
+      <div class="cell">
+        Sub5
+      </div>
+      <div class="cell">
+        Periods
+      </div>
+      <div class="cell">
+        Lab1
+      </div>
+      <div class="cell">
+        Lab2
+      </div>
+      <div class="cell">
+        Lab3
+      </div>
+    </div>
+    
+    {% for row in rows2 %}
+    <div class="row">
+      <div class="cell" data-title="ID">
+        {{row["_id"]}}
+      </div>
+      <div class="cell" data-title="Name">
+        {{row["name"]}}
+      </div>
+      <div class="cell" data-title="Sub1">
+        {{row["sub1"]}}
+      </div>
+      <div class="cell" data-title="Periods">
+        {{row["load1"]}}
+      </div>
+      <div class="cell" data-title="Sub2">
+        {{row["sub2"]}}
+      </div>
+      <div class="cell" data-title="Periods">
+        {{row["load2"]}}
+      </div>
+      <div class="cell" data-title="Sub3">
+        {{row["sub3"]}}
+      </div>
+      <div class="cell" data-title="Periods">
+        {{row["load3"]}}
+      </div>
+      <div class="cell" data-title="Sub4">
+        {{row["sub4"]}}
+      </div>
+      <div class="cell" data-title="Periods">
+        {{row["load4"]}}
+      </div>
+      <div class="cell" data-title="Sub5">
+        {{row["sub5"]}}
+      </div>
+      <div class="cell" data-title="Periods">
+        {{row["load5"]}}
+      </div>
+      <div class="cell" data-title="Lab1">
+        {{row["lab1"]}}
+      </div>
+      <div class="cell" data-title="Lab2">
+        {{row["lab2"]}}
+      </div>
+      <div class="cell" data-title="Lab3">
+        {{row["lab3"]}}
+      </div>
+    </div>
+    {% endfor %}
+    
+  	  <br>
+	  <form action="/remove_teacher" method="post">
+	  	<input type="text" class="form__input" placeholder="ID"  name="remove_t">
+	  	<button class="push_button red" type="submit">remove</button>
+	  </form>
+  </div>
+  
+
+  <div class="header">
+    	Rooms Database
+  </div><br>
+  <div class="table">
+    
+    <div class="row header blue">
+      <div class="cell">
+        ID
+      </div>
+      <div class="cell">
+        Campus
+      </div>
+      <div class="cell">
+        Department
+      </div>
+      <div class="cell">
+        Building
+      </div>
+      <div class="cell">
+        Room
+      </div>
+      <div class="cell">
+        Capacity
+      </div>
+    </div>
+    
+    {% for row in rows3 %}
+    <div class="row">
+      <div class="cell" data-title="ID">
+        {{row["_id"]}}
+      </div>
+      <div class="cell" data-title="Campus">
+        {{row["campus"]}}
+      </div>
+      <div class="cell" data-title="Department">
+        {{row["department"]}}
+      </div>
+      <div class="cell" data-title="Building">
+        {{row["building"]}}
+      </div>
+      <div class="cell" data-title="Room">
+        {{row["room"]}}
+      </div>
+      <div class="cell" data-title="Capacity">
+        {{row["capacity"]}}
+      </div>
+    </div>
+    {% endfor %}
+
+    <br>
+	  <form action="/remove_room" method="post">
+	  	<input type="text" class="form__input" placeholder="ID" name="remove_room">
+	  	<br>
+	  	<button class="push_button red" type="submit">remove</button>
+	  </form>
+    
+  </div>
+
+  
+</div>
+   </body>
+</html>

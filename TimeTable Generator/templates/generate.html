@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Generated Time-Table</title>
+  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href= "{{ url_for('static',filename='styles/style.css') }}">
+  <link rel="stylesheet" href= "{{ url_for('static',filename='styles/displayStyle.css') }}">
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.wrapper {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.blue {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.red {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+h1 {
+  font-family: 'Titillium Web', sans-serif;
+  letter-spacing: .2rem;
+  font-size: 4rem;
+  color: yellow;
+  text-shadow: 
+    -0.1rem 0.1rem 0 black,
+    -0.2rem 0.2rem 0 black,
+    -0.3rem 0.3rem 0 black,
+    -0.4rem 0.4rem 0 black,
+    -0.5rem 0.5rem 0 black;
+}
+  </style>
+
+
+</head>
+<body>
+
+  <br><br><br>
+  <div>
+      <h1>{{ msg }} !!</h1>
+  </div>
+
+	<br>
+	<div>
+        <form action="/display">
+          <button class="button red"/>Sections DataBase</button>
+        </form>
+      </div>
+      <br>
+      <div>
+        <form action="/table">
+          <button class="button blue"/>Generated Time-Tables</button>
+        </form>
+      </div>
+      <br>
+	<div>
+    <br><br><br><br><br><br>
+        <form action="/index">
+          <button class = "push_button red">Home Page</button>
+        </form>
+      </div>
+</body>
+</html>

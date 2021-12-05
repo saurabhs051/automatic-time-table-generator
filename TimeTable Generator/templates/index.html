@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Time Table</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  
+      <link rel="stylesheet" href= "{{ url_for('static',filename='styles/style.css') }}">
+
+  
+</head>
+
+<body>
+
+  <div class="form">
+      
+      <ul class="tab-group">
+        <li class="tab active"><a href="#add_section">Add Section</a></li>
+        <li class="tab"><a href="#add_teacher">Add Teacher</a></li>
+        <li class="tab"><a href="#add_room">Add Room</a></li>
+
+      </ul>
+      
+      <div class="tab-content">
+        <div id="add_section">   
+          <h1>Section Details</h1>
+          
+          <form action="/section_entry" method="post">
+
+
+          
+            <div class="field-wrap">
+              <label>
+                Section Name<span class="req">*</span>
+              </label>
+              <input type="text" name="name"required autocomplete="off" />
+            </div>
+
+
+
+
+            <br />
+            <div class="container" style="width:600px;">
+			   <select name="branch" id="branch" class="form-control input-lg">
+			    <option value="">Select branch</option>
+			   </select>
+
+			   <br /><br />
+			   <select name="sem" id="sem" class="form-control input-lg">
+			    <option value="">Select semester</option>
+			   </select>
+
+
+			   <br /><br />
+			   <select name="sub1" id="sub1" class="form-control input-lg">
+			    <option value="">Select sub1</option>
+			   </select>
+			   	<div class="field-wrap">
+
+              		<input type="text" name="credit1"required autocomplete="off"/>
+          		</div>
+
+			   <br />
+			   <select name="sub2" id="sub2" class="form-control input-lg">
+			    <option value="">Select sub2</option>
+			   </select>
+			   	<div class="field-wrap">
+
+              		<input type="text" name="credit2"required autocomplete="off"/>
+          		</div>
+
+			   <br />
+			   <select name="sub3" id="sub3" class="form-control input-lg">
+			    <option value="">Select sub3</option>
+			   </select>
+			   	<div class="field-wrap">
+
+              		<input type="text" name="credit3" autocomplete="off"/>
+          		</div>
+
+			   <br />
+			   <select name="sub4" id="sub4" class="form-control input-lg">
+			    <option value="">Select sub4</option>
+			   </select>
+			   	<div class="field-wrap">
+
+              		<input type="text" name="credit4" autocomplete="off"/>
+          		</div>
+
+			   <br />
+			   <select name="sub5" id="sub5" class="form-control input-lg">
+			    <option value="">Select sub5</option>
+			   </select>
+			   	<div class="field-wrap">
+
+              		<input type="text" name="credit5" autocomplete="off"/>
+          		</div>
+
+			   <br />
+			   <select name="sub6" id="sub6" class="form-control input-lg">
+			    <option value="">Select sub6</option>
+			   </select>
+			   	<div class="field-wrap">
+
+              		<input type="text" name="credit6" autocomplete="off"/>
+          		</div>
+
+			   <br />
+			   <select name="sub7" id="sub7" class="form-control input-lg">
+			    <option value="">Select sub7</option>
+			   </select>
+			   	<div class="field-wrap">
+
+              		<input type="text" name="credit7" autocomplete="off"/>
+          		</div>
+
+			   <br />
+			   <select name="sub8" id="sub8" class="form-control input-lg">
+			    <option value="">Select sub8</option>
+			   </select>
+			   	<div class="field-wrap">
+
+              		<input type="text" name="credit8" autocomplete="off"/>
+          		</div>
+
+			   <br />
+
+			   
+			   <select name="lab1" id="lab1" class="form-control input-lg">
+			    <option value="">Select lab1</option>
+			   </select>
+
+			   <br /><br />
+			   <select name="lab2" id="lab2" class="form-control input-lg">
+			    <option value="">Select lab2</option>
+			   </select>
+
+			   <br /><br />
+			   <select name="lab3" id="lab3" class="form-control input-lg">
+			    <option value="">Select lab3</option>
+			   </select>
+
+			   <br /><br />
+			   <select name="lab4" id="lab4" class="form-control input-lg">
+			    <option value="">Select lab4</option>
+			   </select>
+
+			   <br /><br />
+			   <select name="lab5" id="lab5" class="form-control input-lg">
+			    <option value="">Select lab5</option>
+			   </select>
+			  </div>
+			  <br /><br /><br />
+
+          
+          <button type="submit" class="button button-block"/>Add Section</button>
+          
+          </form>
+
+        </div>
+        
+        <div id="add_teacher">   
+          <h1>Teacher Details</h1>
+          
+          <form action="/teacher_entry" method="post">
+          
+            <div class="field-wrap">
+            <label>
+              Name<span class="req">*</span>
+            </label>
+            <input type="text" name="teacher_name"required autocomplete="off"/>
+          </div>
+          
+          <div class="field-wrap">
+              <label>
+                Subject 1<span class="req">*</span>
+              </label>
+              <input type="text" name="teacher_sub1"required autocomplete="off"/>
+
+              <label>
+                Periods<span class="req">*</span>
+              </label>
+              <input type="text" name="periods1"required autocomplete="off"/>
+            </div>
+          
+
+          <div class="field-wrap">
+            <label>
+              Subject 2<span class="req"></span>
+            </label>
+            <input type="text"name="teacher_sub2" autocomplete="off"/>
+
+            <label>
+                Periods<span class="req"></span>
+              </label>
+              <input type="text" name="periods2" autocomplete="off"/>
+          </div>
+          
+          <div class="field-wrap">
+            <label>
+              Subject 3<span class="req"></span>
+            </label>
+            <input type="text" name="teacher_sub3" autocomplete="off"/>
+
+            <label>
+                Periods<span class="req"></span>
+              </label>
+              <input type="text" name="periods3" autocomplete="off"/>
+          </div>
+
+          <div class="field-wrap">
+            <label>
+              Subject 4<span class="req"></span>
+            </label>
+            <input type="text"  name="teacher_sub4" autocomplete="off"/>
+
+            <label>
+                Periods<span class="req"></span>
+              </label>
+              <input type="text" name="periods4" autocomplete="off"/>
+          </div>
+
+          <div class="field-wrap">
+            <label>
+              Subject 5<span class="req"></span>
+            </label>
+            <input type="text"  name="teacher_sub5" autocomplete="off"/>
+
+            <label>
+                Periods<span class="req"></span>
+              </label>
+              <input type="text" name="periods5" autocomplete="off"/>
+          </div>
+
+         
+
+          <div class="field-wrap">
+            <label>
+              Lab 1<span class="req"></span>
+            </label>
+            <input type="text" name="teacher_lab1" autocomplete="off"/>
+          </div>
+
+          <div class="field-wrap">
+            <label>
+              Lab 2<span class="req"></span>
+            </label>
+            <input type="text"  name="teacher_lab2" autocomplete="off"/>
+          </div>
+
+          <div class="field-wrap">
+            <label>
+              Lab 3<span class="req"></span>
+            </label>
+            <input type="text"  name="teacher_lab3" autocomplete="off"/>
+          </div>
+          
+          <button class="button button-block"/>Add Teacher</button>
+          
+          </form>
+
+        </div>
+
+        <!-- room form starts here-->
+        <div id="add_room">   
+          <h1>Room Details</h1>
+          
+          <form action="/room_entry" method="post">
+
+          	<div class="field-wrap">
+            <label>
+              Campus Number<span class="req">*</span>
+            </label>
+            <input type="text" name="campus"required autocomplete="off"/>
+            </div>
+
+          	<div class="field-wrap">
+            <label>
+              Department<span class="req">*</span>
+            </label>
+            <input type="text" name="department"required autocomplete="off"/>
+            </div>
+
+            <div class="field-wrap">
+            <label>
+              Building Name<span class="req">*</span>
+            </label>
+            <input type="text" name="building"required autocomplete="off"/>
+            </div>
+
+            <div class="field-wrap">
+            <label>
+              Room Name<span class="req">*</span>
+            </label>
+            <input type="text" name="room"required autocomplete="off"/>
+            </div>
+
+            <div class="field-wrap">
+            <label>
+              Student Capacity<span class="req">*</span>
+            </label>
+            <input type="text" name="capacity"required autocomplete="off"/>
+            </div>
+          
+          <button class="button button-block"/>Add Room</button>
+          
+          </form>
+
+        </div>
+        
+      </div><!-- tab-content -->
+
+
+      <div><br><br><br></div>
+      <div>
+        <form action="/display">
+          <button class="button button-block"/>Database</button>
+        </form>
+      </div>
+
+      <br>
+      	<div>
+        <form action="/generate">
+          <button class="button button-block"/>GENERATE</button>
+        </form>
+      </div>
+      <div>
+      
+</div> <!--/form-->
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script  src="{{url_for('static', filename='js/index.js')}}"></script>
+
+
+</body>
+
+</html>
+
+
+<script>
+$(document).ready(function(){
+
+ load_json_data('Branch', 'branch');
+
+ function load_json_data(valueType, id, branch, semester)
+ {
+  		var html_code = '';
+  		$.getJSON("{{ url_for('static',filename='jsondata/branch_semester_sub_lab.json') }}", function(data){
+
+   				html_code += '<option value="">Select '+id+'</option>';
+   				$.each(data, function(key, value){
+
+    					if(id == 'branch' || id == 'sem')
+	    				{
+	    						 if(value.type == valueType)
+     								{
+      										html_code += '<option value="'+value.id+'">'+value.name+'</option>';
+     								}
+   						 }
+    					else 
+    					{
+     								if((value.type == valueType) && (value.branch == branch) && (value.sem == semester))
+     								{
+      										html_code += '<option value="'+value.id+'">'+value.name+'</option>';
+     								}
+    					}
+   				});
+
+   				$('#'+id).html(html_code);
+  		});
+
+ }
+
+function set_credit(sub_id, credit_id)
+ {
+  		var html_code = '';
+  		$.getJSON("{{ url_for('static',filename='jsondata/branch_semester_sub_lab.json') }}", function(data){
+
+   				$.each(data, function(key, value){
+
+	    			if(value.id == sub_id)
+     				{
+      					$('[name="'+credit_id+'"]').val(value.credits);
+     				}
+   				});
+
+  		});
+
+ }
+
+
+
+ $(document).on('change', '#branch', function(){
+  		var branch_id = $(this).val();
+  		if(branch_id != '')
+  		{
+   				load_json_data('Semester','sem', branch_id);
+  		}
+  		else
+  		{
+   				$('#sem').html('<option value="">Select Semester</option>');
+   				$('#sub1').html('<option value="">Select sub1</option>');
+  		}
+ });
+
+ $(document).on('change', '#sem', function(){
+ 		var branch_id = $('#branch').val();
+  		var semester_id = $(this).val();
+  		if(semester_id != '')
+  		{
+   				load_json_data('Subject','sub1', branch_id, semester_id);
+   				load_json_data('Subject','sub2', branch_id, semester_id);
+   				load_json_data('Subject','sub3', branch_id, semester_id);
+   				load_json_data('Subject','sub4', branch_id, semester_id);
+   				load_json_data('Subject','sub5', branch_id, semester_id);
+   				load_json_data('Subject','sub6', branch_id, semester_id);
+   				load_json_data('Subject','sub7', branch_id, semester_id);
+   				load_json_data('Subject','sub8', branch_id, semester_id);
+
+   				load_json_data('Lab','lab1', branch_id, semester_id);
+   				load_json_data('Lab','lab2', branch_id, semester_id);
+   				load_json_data('Lab','lab3', branch_id, semester_id);
+   				load_json_data('Lab','lab4', branch_id, semester_id);
+   				load_json_data('Lab','lab5', branch_id, semester_id);
+
+
+  		}
+  		else
+  		{
+   				$('#sub1').html('<option value="">Select Subject1</option>');
+   				$('#sub2').html('<option value="">Select Subject2</option>');
+   				$('#sub3').html('<option value="">Select Subject3</option>');
+   				$('#sub4').html('<option value="">Select Subject4</option>');
+   				$('#sub5').html('<option value="">Select Subject5</option>');
+   				$('#sub6').html('<option value="">Select Subject6</option>');
+   				$('#sub7').html('<option value="">Select Subject7</option>');
+   				$('#sub8').html('<option value="">Select Subject8</option>');
+
+   				$('#lab1').html('<option value="">Select Lab1</option>');
+   				$('#lab2').html('<option value="">Select Lab2</option>');
+   				$('#lab3').html('<option value="">Select Lab3</option>');
+   				$('#lab4').html('<option value="">Select Lab4</option>');
+   				$('#lab5').html('<option value="">Select Lab5</option>');
+
+  		}
+ });
+  $(document).on('change', '#sub1', function(){
+  		var subject_id = $(this).val();
+  		if(subject_id != '')
+  		{
+   				set_credit(subject_id, 'credit1');
+  		}
+ });
+  $(document).on('change', '#sub2', function(){
+  		var subject_id = $(this).val();
+  		if(subject_id != '')
+  		{
+   				set_credit(subject_id, 'credit2');
+  		}
+ });
+
+  $(document).on('change', '#sub3', function(){
+  		var subject_id = $(this).val();
+  		if(subject_id != '')
+  		{
+   				set_credit(subject_id, 'credit3');
+  		}
+ });
+
+  $(document).on('change', '#sub4', function(){
+  		var subject_id = $(this).val();
+  		if(subject_id != '')
+  		{
+   				set_credit(subject_id, 'credit4');
+  		}
+ });
+
+  $(document).on('change', '#sub5', function(){
+  		var subject_id = $(this).val();
+  		if(subject_id != '')
+  		{
+   				set_credit(subject_id, 'credit5');
+  		}
+ });
+
+  $(document).on('change', '#sub6', function(){
+  		var subject_id = $(this).val();
+  		if(subject_id != '')
+  		{
+   				set_credit(subject_id, 'credit6');
+  		}
+ });
+
+  $(document).on('change', '#sub7', function(){
+  		var subject_id = $(this).val();
+  		if(subject_id != '')
+  		{
+   				set_credit(subject_id, 'credit7');
+  		}
+ });
+
+  $(document).on('change', '#sub8', function(){
+  		var subject_id = $(this).val();
+  		if(subject_id != '')
+  		{
+   				set_credit(subject_id, 'credit8');
+  		}
+ });
+
+
+
+
+});
+
+
+</script>
+
