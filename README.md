@@ -29,4 +29,8 @@ administrators to academic activities.
 The proposed Automatic Timetable Generator Software will help us to easily generate randomised timetables for each semester of each branch. It will also export it to easily distributable formats with separate views for Professors and students.
 
 
-![ClassDiagram](https://user-images.githubusercontent.com/31157117/144729961-bab7d6dd-08ad-4301-b8af-75785c0733d1.jpg)
+![UseCaseDiagram1](https://user-images.githubusercontent.com/31157117/144730039-43d2f07a-d6ad-489a-b20b-45d5a2ed6650.jpg)
+
+
+![ClassDiagram11](https://user-images.githubusercontent.com/31157117/144730056-ef4a9e14-39f5-4e6c-9132-30c0be6d10ed.jpg)
+
