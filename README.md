@@ -27,3 +27,6 @@ The quality of the timetable determines the quality of time dedicated by lecture
 administrators to academic activities.
 
 The proposed Automatic Timetable Generator Software will help us to easily generate randomised timetables for each semester of each branch. It will also export it to easily distributable formats with separate views for Professors and students.
+
+
+![ClassDiagram](https://user-images.githubusercontent.com/31157117/144729961-bab7d6dd-08ad-4301-b8af-75785c0733d1.jpg)
